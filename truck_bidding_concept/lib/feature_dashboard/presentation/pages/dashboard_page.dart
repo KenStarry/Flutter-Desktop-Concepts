@@ -21,7 +21,6 @@ class _DashboardPageState extends State<DashboardPage> {
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-
                 colors: [greenBackground, darkGreenBackground])),
       ),
     );
