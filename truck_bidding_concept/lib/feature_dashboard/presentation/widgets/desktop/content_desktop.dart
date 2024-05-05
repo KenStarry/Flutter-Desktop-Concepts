@@ -32,7 +32,7 @@ class _ContentDesktopState extends State<ContentDesktop> {
                       end: Alignment.bottomLeft,
                       colors: [darkBlue, darkGreenBackground]))),
           const Padding(
-            padding: EdgeInsets.only(left: 24, right: 24, top: 32),
+            padding: EdgeInsets.only(left: 24, right: 32, top: 32),
             child: CustomScrollView(
               physics: AlwaysScrollableScrollPhysics(parent: ClampingScrollPhysics()),
               slivers: [
