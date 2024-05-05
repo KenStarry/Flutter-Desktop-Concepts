@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:truck_bidding_concept/core/presentation/widgets/responsive_layout.dart';
 import 'package:truck_bidding_concept/feature_dashboard/presentation/pages/dashboard_page_desktop.dart';
+import 'package:truck_bidding_concept/theme/my_theme.dart';
 import 'package:window_manager/window_manager.dart';
 
 void main() async {
@@ -29,12 +30,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ResponsiveLayout(
+    return MaterialApp(
+      home: const ResponsiveLayout(
           mobileBody: DashboardPageDesktop(),
           tabletBody: DashboardPageDesktop(),
           desktopBody: DashboardPageDesktop()),
       debugShowCheckedModeBanner: false,
+      theme: MyTheme.lightTheme,
+      darkTheme: MyTheme.lightTheme,
     );
   }
 }
