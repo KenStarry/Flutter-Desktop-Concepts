@@ -31,9 +31,10 @@ class _ContentDesktopState extends State<ContentDesktop> {
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                       colors: [darkBlue, darkGreenBackground]))),
-          Padding(
-            padding: const EdgeInsets.only(left: 24, right: 24, top: 32),
+          const Padding(
+            padding: EdgeInsets.only(left: 24, right: 24, top: 32),
             child: CustomScrollView(
+              physics: AlwaysScrollableScrollPhysics(parent: ClampingScrollPhysics()),
               slivers: [
                 //  toolbar
                 ContentToolbarDesktop()

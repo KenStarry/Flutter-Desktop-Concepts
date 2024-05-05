@@ -22,6 +22,8 @@ class _ContentToolbarDesktopState extends State<ContentToolbarDesktop> {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //  textfield
           Container(
@@ -47,7 +49,66 @@ class _ContentToolbarDesktopState extends State<ContentToolbarDesktop> {
                         borderRadius: BorderRadius.circular(12))),
               )),
 
-          Text('Helooooooo')
+          Row(
+            children: [
+              //  notification icon
+              Container(
+                width: 45,
+                height: 45,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: darkGreenBackground),
+                child: Icon(
+                  Icons.notifications_rounded,
+                  color: Colors.white,
+                ),
+              ),
+
+              const SizedBox(width: 24),
+
+              //  profile icon
+              Row(
+                children: [
+                  Container(
+                    width: 45,
+                    height: 45,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: darkGreenBackground),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset('assets/images/test2.jpg',
+                          width: double.infinity,
+                          height: double.infinity,
+                          filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Avery Winter',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white)),
+
+                      //  role
+                      Text(
+                        'Admin',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white.withOpacity(0.7)),
+                      )
+                    ],
+                  )
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
