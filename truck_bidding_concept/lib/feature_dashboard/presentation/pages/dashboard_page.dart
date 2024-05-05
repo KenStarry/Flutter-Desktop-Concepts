@@ -12,6 +12,9 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
+
+    print("${MediaQuery.of(context).size.width}");
+
     return Scaffold(
       backgroundColor: greenBackground,
       body: Container(
