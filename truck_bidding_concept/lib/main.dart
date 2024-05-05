@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:truck_bidding_concept/feature_dashboard/presentation/pages/dashboard_page.dart';
+import 'package:truck_bidding_concept/core/presentation/widgets/responsive_layout.dart';
+import 'package:truck_bidding_concept/feature_dashboard/presentation/pages/dashboard_page_desktop.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: DashboardPage(),
+      home: ResponsiveLayout(
+          mobileBody: DashboardPageDesktop(),
+          tabletBody: DashboardPageDesktop(),
+          desktopBody: DashboardPageDesktop()),
       debugShowCheckedModeBanner: false,
     );
   }
