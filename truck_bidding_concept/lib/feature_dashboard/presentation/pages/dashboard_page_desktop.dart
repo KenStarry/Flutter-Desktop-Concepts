@@ -31,7 +31,7 @@ class _DashboardPageDesktopState extends State<DashboardPageDesktop> {
             //  sidebar
             Expanded(flex: 1, child: SideBarDesktop()),
             //  main content
-            Expanded(flex: 4, child: ContentDesktop())
+            Expanded(flex: 3, child: ContentDesktop())
           ],
         ),
       ),
